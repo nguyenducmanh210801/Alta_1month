@@ -1,0 +1,185 @@
+:root {
+  --red: #E73F3F;
+  --gray: #D4D4D7;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    padding: 0 0 0 0px;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+  }
+
+.left {
+  position: absolute;
+  width: 948px;
+  height: 910px;
+  left: 692px;
+  top: 0px;
+
+ 
+
+  background: #FFFFFF;
+}
+.nameshow {
+  width: 133px;
+  height: 27px;
+ 
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  'Liberation Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  
+  color: #37474F;
+  
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.nameinput{
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 15px;
+gap: 10px;
+
+width: 400px;
+height: 44px;
+
+
+background: #FFFFFF;
+
+
+border: 1.5px solid #D4D4D7;
+border-radius: 8px;
+box-sizing: border-box;
+
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+font-size: medium;
+font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+'Liberation Sans', sans-serif;
+
+}
+
+.container {
+  position: absolute;
+  left: 94px;
+  top: 293px;
+}
+
+.passcontainer {
+  position: absolute;
+  left: 94px;
+  top: 384px;
+  
+}
+
+.passInput {
+  width: 400px;
+  height: 44px;
+  place-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1.5px solid var(--gray);
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: larger;
+  font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  -webkit-text-security: disc;
+}
+
+.passMessageBefore {
+  position: absolute;
+  width: 192px;
+  height: 21px;
+  left: 94px;
+  top: 471px;
+  font-size: 16px;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  color: #E73F3F;
+}
+
+.logoAlta {
+  position: absolute;
+  left: 208px;
+  top: 82px;
+  width: 170px;
+  height: 136px;
+}
+
+.LogoRightImg{
+  
+  position: absolute;
+  width: 605px;
+  height: 614.06px;
+  left: 79px;
+  top: 112.94px;
+  right: 164px;
+
+}
+
+.TextRight {
+
+position: absolute;
+width: 142px;
+height: 54px;
+left: 470px;
+top: 407px;
+
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 51px;
+
+
+text-align: center;
+
+}
+
+.Btnlogin{
+ 
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 24px;
+gap: 8px;
+
+position: absolute;
+width: 162px;
+height: 40px;
+left: 215px;
+top: 511px;
+background: #FF9138;
+
+color: #fff;
+font-size: 16px;
+line-height: 24px;
+font-weight: bold;
+font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+
+
+border-radius: 8px;
+}
