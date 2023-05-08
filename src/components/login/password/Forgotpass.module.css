@@ -1,0 +1,32 @@
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    padding: 0 0 0 0px;
+    border-radius: 16px;
+    background-color: #f6f6f6;
+}
+
+.left {
+  position: absolute;
+  width: 948px;
+  height: 910px;
+  left: 692px;
+  top: 0px;
+
+ 
+
+  background: #FFFFFF;
+}
+
+
+
+.logoalta{
+    position: absolute;
+    left: 208px;
+    top: 82px;
+    width: 170px;
+    height: 136px;
+}
