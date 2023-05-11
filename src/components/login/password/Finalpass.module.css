@@ -1,0 +1,146 @@
+.container {
+    position: absolute;
+    left: 94px;
+    top: 293px;
+    
+}
+
+.TextOne{
+    /* phần text dat lai mat khau */
+    position: absolute;
+    left: 12%;
+    right: 73.68%;
+    top: 325px;
+    bottom: 57.53%;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 0px;
+    color: #282739;
+}
+
+.InputText {
+    width: 400px;
+    height: 75px;
+    left: 94px;
+    top: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    position: absolute;
+    
+    height: 44px;
+    width: 400px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.PassText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+    position: absolute;
+    width: 400px;
+    height: 75px;
+    left: 94px;
+    top: 455px;
+    /* xác nhận mk */
+    height: 44px;
+    width: 400px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    
+}
+  
+.nameinput{
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    
+    width: 400px;
+    height: 44px;
+    top: 409px;
+    left: 94px;
+    
+    
+    background: #FFFFFF;
+    
+    
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    box-sizing: border-box;
+    
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    font-size: medium;
+    font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.passinput{
+  
+    width: 400px;
+    height: 44px;
+    top: 513px;
+    left: -307px;
+    place-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    background-color: #fff;
+    
+    font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+      'Liberation Sans', sans-serif;
+  
+}
+
+.BtnLogin{
+ 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 162px;
+    height: 40px;
+    left: 215px;
+    top: 613px;
+    background: #FF9138;
+    
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        'Liberation Sans', sans-serif;
+    
+    
+    border-radius: 8px;
+    }
+
+
+
+
+
+
+

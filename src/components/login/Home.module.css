@@ -89,7 +89,7 @@ font-family: Nunito, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Ne
   align-items: center;
   padding: 15px;
   box-sizing: border-box;
-  border: 1.5px solid var(--gray);
+  border: 1.5px solid #D4D4D7;
   border-radius: 8px;
   background-color: #fff;
   

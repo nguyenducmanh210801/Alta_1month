@@ -101,7 +101,7 @@ const Home = () => {
                 </div>
 
                 <div >
-                    <button className={classes.Btnlogin} type="submit" onClick={handleLogin}>Đăng nhập</button>
+                    <Link to='/mainpages'><button className={classes.Btnlogin} type="submit" onClick={handleLogin}>Đăng nhập</button></Link>
                 </div>
 
                 <div>
