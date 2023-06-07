@@ -35,18 +35,16 @@ const MenuBar=()=> {
         </div>
 
         <div className={classes.ItemCapso}>
-          <img src={CapSo}></img>
-          <a>Cấp số</a>
+          <Link to="/"> <img src={CapSo}></img><a>Cấp số</a></Link>
         </div>
 
         <div className={classes.ItemBaocao}>
-          <img src={BaoCao}></img>
-          <a>Báo cáo</a>
+          <Link to="/"><img src={BaoCao}></img><a>Báo cáo</a></Link> 
         </div>
 
         <div className={classes.ItemCaidat}>
-          <img src={CaiDat}></img>
-          <a>Cài đặt thiết bị<MoreOutlined/></a>
+        <Link to="/"> <img src={CaiDat}></img><a>Cài đặt thiết bị<MoreOutlined/></a> </Link>
+
         </div>
         
          

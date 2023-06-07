@@ -4,6 +4,9 @@ import Forgotpass from './components/login/password/Forgotpass'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Finalpass from './components/login/password/Finalpass';
 import MainPages from './components/mainpages/MainPages';
+import ThietBi from './components/ThietBi/ThietBi';
+import ChiTietTB from './components/ThietBi/ChiTietTB/ChiTietTB';
+import CapNhatTB from './components/ThietBi/CapNhatTB/CapNhatTB';
 function App() {
  
   return (
@@ -14,6 +17,10 @@ function App() {
       <Route path="/forgotpass" element={<Forgotpass />} />
       <Route path="/finalpass" element={<Finalpass />} />
       <Route path="/mainpages" element={<MainPages/>} />
+      <Route path="/thietbi" element={<ThietBi />} />
+      <Route path="/chitietthietbi" element={<ChiTietTB/>} />
+      <Route path="/capnhattb" element={<CapNhatTB/>} />
+      
       </Routes>
     </BrowserRouter>
     </div>
