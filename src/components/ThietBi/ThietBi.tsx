@@ -328,7 +328,7 @@ const ThietBi: React.FC =() => {
             </table>
                         
                         <div className={classes.ThemTB}>
-                            <Link to='/ThemTB'><img src={Add} />Thêm Thiết Bị</Link>
+                            <Link to='/themthietbi'><img src={Add} />Thêm Thiết Bị</Link>
                         </div>
                         <div className={classes.Phantrang}>
                             <Pagination defaultCurrent={1} total={50} />

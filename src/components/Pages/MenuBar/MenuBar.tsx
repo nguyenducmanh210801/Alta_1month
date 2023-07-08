@@ -31,20 +31,24 @@ const MenuBar=()=> {
 
         <div className={classes.ItemDichvu}>
           <img src={DichVu}></img>
-          <Link to="/ForgotPass"> Dịch vụ</Link>
+          <Link to="/dichvu"> Dịch vụ</Link>
         </div>
 
         <div className={classes.ItemCapso}>
-          <Link to="/"> <img src={CapSo}></img><a>Cấp số</a></Link>
+          <Link to="/capsochinh"> <img src={CapSo}></img><a>Cấp số</a></Link>
         </div>
 
         <div className={classes.ItemBaocao}>
-          <Link to="/"><img src={BaoCao}></img><a>Báo cáo</a></Link> 
+          <Link to="/baocao"><img src={BaoCao}></img><a>Báo cáo</a></Link> 
         </div>
 
         <div className={classes.ItemCaidat}>
-        <Link to="/"> <img src={CaiDat}></img><a>Cài đặt thiết bị<MoreOutlined/></a> </Link>
-
+        <Link to="/TK"> <img src={CaiDat}></img><a>Cài đặt thiết bị<MoreOutlined/></a> </Link>
+            <div className={classes.DetailEqui8}>                                     
+              <Link className={classes.L1} to="/VT">Quản lý Vai trò </Link>
+              <Link className={classes.L2} to="/TK">Quản lý Tài khoản </Link>
+              <Link className={classes.L3} to="/ND">Nhật ký người dùng </Link>
+            </div>
         </div>
         
          
