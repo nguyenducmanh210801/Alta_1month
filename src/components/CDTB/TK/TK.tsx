@@ -113,7 +113,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
 
                         </tr>
@@ -141,7 +141,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr style={{ background: 'white' }}  >
@@ -168,7 +168,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr>
@@ -195,7 +195,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr style={{ background: 'white' }}  >
@@ -222,7 +222,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr>
@@ -249,7 +249,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr style={{ background: 'white' }}  >
@@ -276,7 +276,7 @@ const TK:React.FC =() => {
                                 </div>
                             </td>
                             <td className={classes.UpdateDichVu}>
-                                <Link to="/TaiKhoanCapNhat">Cập nhật</Link>
+                                <Link to="/taikhoancapnhat">Cập nhật</Link>
                             </td>
                         </tr>
                         <tr>

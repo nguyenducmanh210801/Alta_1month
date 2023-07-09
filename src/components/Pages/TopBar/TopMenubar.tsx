@@ -1,8 +1,8 @@
-import React from 'react'
 import classes from '../TopBar/TopMenubar.module.css'
 import Ring from '../../assets/img/ring.png'
 import Avatar from '../../assets/img/avatar.png'
 import { Link } from 'react-router-dom';
+
 const TopBar = () => {
   return (
     <div className={classes.TopBarMenu}>
@@ -12,7 +12,7 @@ const TopBar = () => {
             </div>
           <div className={classes.ImageAvatar}>
             {/* dẫn tới trang infor */}
-            <Link to='/Infor'> <img src={Avatar}></img></Link>
+            <Link to='/mainpages'> <img src={Avatar}></img></Link>
           </div>
       </div>     
       <div className={classes.BoxContentsRight}>

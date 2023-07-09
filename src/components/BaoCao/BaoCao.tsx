@@ -1,25 +1,19 @@
 import React from 'react'
 import { useState } from "react";
-import MenuBar from '../../Pages/MenuBar/MenuBar'
-import TopMenuBar from '../../Pages/TopBar/TopMenubar'
-import classes from '../CSChinh/CSChinh.module.css'
-import Add from '../../assets/img/AddTB.png'
-import Vector from '../../assets/img/V.png'
-import { Input } from 'antd';
+import MenuBar from '../Pages/MenuBar/MenuBar'
+import TopMenuBar from '../Pages/TopBar/TopMenubar'
+import classes from '../BaoCao/BaoCao.module.css'
+import Add from '../assets/img/D.png'
+import Vector from '../assets/img/V.png'
+import right from '../assets/img/right.png'
+import { Input,Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
 import { Pagination } from 'antd';
-import { DatePicker, } from 'antd';
+import { DatePicker } from 'antd';
 import { CaretRightFilled } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
+import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 
-const CSChinh: React.FC =() => {
-    const navigate = useNavigate();
-    const [selectedOption, setSelectedOption] = useState('');
-    const handleOptionChange = (event: { target: { value: any; }; }) => {
-        const selectedValue = event.target.value;
-        setSelectedOption(selectedValue);
-        navigate(selectedValue); 
-      };
+const BaoCao: React.FC =() => {
 
     const [choose1, setValue1] = useState('designation1');
     const handlechoose1Change = (e: any) => 
@@ -42,6 +36,10 @@ const CSChinh: React.FC =() => {
     {
         console.log(date, dateString);
     }
+    const onClick = (event: CheckboxChangeEvent) => 
+    {
+        console.log(`checked = ${event.target.checked}`);     
+    };
     return (
         <div className={classes.Equi}>
             <div className={classes.Equiheader}>
@@ -50,60 +48,18 @@ const CSChinh: React.FC =() => {
             </div>
            
             <div className={classes.BoxHeader}>
-                <h1>Cấp số <img src={Vector}></img> 
-                    <a href='/capsochinh'> Danh sách cấp số</a> 
+                <h1>Báo cáo <img src={Vector}></img> 
+                    <a href='/BaoCao'> lập báo cáo</a> 
                 </h1>
-                <h2>Quản lí cấp số</h2>
+                <h2>Quản lí báo cáo</h2>
             </div>
 
-           
-            <div className={classes.Combobox}>
-               
-                <label>Tên dịch vụ</label>
-                <select 
-                    value={choose1} 
-                    onChange={handlechoose1Change}>
-                    <option value="1">Tất cả</option>
-                    <option value="2">Khám sản - Phụ khoa</option>
-                    <option value="3">Khám răng hàm mặt</option>
-                    <option value="4">Khám tai mũi họng</option>
-                </select>
-
-            </div>
-
-            
-            <div className={classes.Combobox2}>
-                <label>Tình trạng</label>
-                <select 
-                    value={selectedOption} 
-                    onChange={handleOptionChange}>
-                    <option value="/capsochinh">Tất cả</option>
-                    <option value="/capsodangcho">Đang chờ</option>
-                    <option value="/capsodasudung">Đã sử dụng</option>
-                    <option value="/capsoboqua">Bỏ qua</option>
-                </select>
-
-            </div>
-
-            <div className={classes.Combobox3}>
-                <label>Nguồn cấp</label>
-                <select 
-                    value={choose2} 
-                    onChange={handleSelect2Change}>
-                    <option value="9">Tất cả</option>
-                    <option value="10">Kiosk</option>
-                    <option value="11">Hệ thống</option>
-                    
-                </select>
-
-            </div>
-            {/* lịch */}
             <div className={classes.DateBegin}>
                 <p>Chọn thời gian</p>
                 <DatePicker  
                     onChange={onChange} 
                     style={{top: -659, 
-                            left: 795, 
+                            left: 232, 
                             height: 44
                         }}
                     ></DatePicker> 
@@ -117,7 +73,7 @@ const CSChinh: React.FC =() => {
                 <DatePicker 
                     onChange={onChange} 
                     style={{top: -702, 
-                            left: 1000, 
+                            left: 432, 
                             height: 44 
                         }}
                     ></DatePicker> 
@@ -138,42 +94,90 @@ const CSChinh: React.FC =() => {
                         <thead  >
                             <tr   >
                                 {/* tựa đề bảng */}
-                                <th style={{ fontSize: '18px',paddingLeft:'20px' }} >STT</th>
-                                <th style={{ width: '190px',fontSize: '18px',paddingLeft:'20px'  }} >Tên khách hàng</th>
-                                <th style={{ fontSize: '18px',paddingLeft:'20px'  }} >Tên dịch vụ</th>
-                                <th style={{ width: '188px', fontSize: '18px',paddingLeft:'20px'  }} >
+                                <th style={{ fontSize: '18px',paddingLeft:'20px', width: '15%' }}>Số thứ tự 
+                                <img style={{marginLeft: '45%'}} className={classes.right} src={right} ></img>
+                                <div className={classes.DetailEqui}>
+                                    <p  className={classes.sott} > Tất cả</p>
+                                    <p style={{ marginLeft: '18px'}} > 2040001</p>
+                                    <p style={{ marginLeft: '18px'}} > 2040002</p>
+                                    <p style={{ marginLeft: '18px'}} > 2040003</p>
+                                    <p style={{ marginLeft: '18px'}} > 2040004</p>
+                                </div>
+
+                                 </th>
+
+                                <th style={{ fontSize: '18px',paddingLeft:'20px',width: '20%'  }} >Tên dịch vụ <img style={{marginLeft: '50%'}}  className={classes.right} src={right} ></img> 
+                                <div className={classes.DetailEqui5}>
+                                    
+                                    <div style={{ padding: '10px'}} className={classes.MenuSet}>
+                                        <label style={{ fontWeight: '400', marginLeft: '18px', color: 'black'}} > Tất cả   
+                                            <Checkbox style={{ marginLeft: '170px'}}
+                                                onChange={onClick}>
+                                            </Checkbox>
+                                        </label>
+                                    </div>
+                                    <div style={{ padding: '10px'}} className={classes.MenuSet}>
+                                                
+                                        <label style={{ fontWeight: '400', marginLeft: '18px', color: 'black'}} >   
+                                        
+                                            <Checkbox style={{ marginLeft: '215px'}}
+                                                onChange={onClick}><span className={classes.KhamTQ} >Khám tim mạch </span> 
+                                            </Checkbox>
+                                        </label>
+                                    </div>
+                                    <div style={{ padding: '10px'}} className={classes.MenuSet}>
+                                        <label style={{ fontWeight: '400', marginLeft: '18px',color: 'black'}} >  
+                                            <Checkbox style={{ marginLeft: '215px'}}
+                                                onChange={onClick}><span className={classes.KhamTQ2} >Khám tổng quát </span> 
+                                            </Checkbox>
+                                        </label>
+                                    </div>
+                                </div>
+                                 </th>
+                                <th style={{ width: '156px', fontSize: '18px',paddingLeft:'20px'  }} >
                                     Thời gian cấp 
+                                <img style={{marginLeft: '57%'}} className={classes.right} src={right} ></img>
+                                    <div className={classes.DetailEqui2}>
+                                    <p  className={classes.sott} > Tất cả</p>
+                                    <p style={{ marginLeft: '18px'}} > 07:10  01/10/2021</p>
+                                    <p style={{ marginLeft: '18px'}} > 07:10  01/10/2021</p>
+                                    <p style={{ marginLeft: '18px'}} > 07:10  01/10/2021</p>
+                                    <p style={{ marginLeft: '18px'}} > 07:10  01/10/2021</p>
+                                </div>
                                 </th>
-                                <th style={{ width: '154px', fontSize: '18px',paddingLeft:'20px'  }} >
-                                    Hạn sử dụng
+                                <th style={{ fontSize: '18px',paddingLeft:'20px'  }}>
+                                    Tình trạng 
+                                <img style={{marginLeft: '54%'}} className={classes.right} src={right} ></img> 
+                                <div className={classes.DetailEqui3}>
+                                    <p  className={classes.sott} > Tất cả</p>
+                                    <p style={{ marginLeft: '18px'}} > Đang chờ</p>
+                                    <p style={{ marginLeft: '18px'}} > Đã sử dụng</p>
+                                    <p style={{ marginLeft: '18px'}} > Bỏ qua</p>
+                                </div>
                                 </th>
-                                <th style={{ fontSize: '18px',paddingLeft:'20px'  }}>Trạng thái</th>
-                                <th style={{ textAlign: 'center'  }} >Nguồn cấp</th>
-                                <th></th>
+                                
+                                <th style={{ paddingLeft:'20px'  }} >Nguồn cấp <img style={{marginLeft: '52%'}} className={classes.right} src={right} ></img> 
+                                <div className={classes.DetailEqui4}>
+                                    <p  className={classes.sott} > Tất cả</p>
+                                    <p style={{ marginLeft: '18px'}} > Kiosk</p>
+                                    <p style={{ marginLeft: '18px'}} >Hệ thống</p>
+                                    
+                                </div>
+                                </th>
+                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr style={{ background: 'white' }} >
                                 <td style={{ textAlign:'center', width: '8%' }} >2010001</td>
-
-                                <td>Lê Huỳnh Ái Vân</td>
-
                                 <td>Khám tim mạch</td>
                                 
                                 <td className={classes.conditionA}>
-                                    {/* <span className={classes.ConnectFail}></span> */}
                                     <label className={classes.BoxFail}>
                                         14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        {/* <span className={classes.ConnectFalse}></span> */}
-                                        <label className={classes.BoxFalse}>
-                                            14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                                
                                 <td>
                                     <div className={classes.Connect}>
                                         <span className={classes.Green}></span>
@@ -181,23 +185,19 @@ const CSChinh: React.FC =() => {
                                             Đang chờ
                                         </label>
                                     </div>
-                                                                                                          
+                                                                                                         
                                 </td>
                                 <td  className={classes.link}>
-                                   
+                                    
                                     <p className={classes.Text3}>
                                         Kiosk
                                     </p>
-                                </td>
-
-                                <td className={classes.Update}>
-                                    <Link to="/CapSoChiTiet">Chi tiết</Link>
                                 </td>
                             </tr>
                             <tr>
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010002</td>
 
-                                <td>Huỳnh Ái Vân</td>
+                                {/* <td>Huỳnh Ái Vân</td> */}
 
                                 <td style={{ width: '15%' }}  >Khám sản - Phụ Khoa</td>
 
@@ -208,14 +208,7 @@ const CSChinh: React.FC =() => {
                                         14:35 - 07/11/2021
                                     </p>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        {/* <span className={classes.ConnectRight}></span> */}
-                                        <label style={{ marginLeft: '2%' }}   className={classes.BoxRight}>
-                                            14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                               
                                 <td>
                                     <div className={classes.Connect}>
                                         <span className={classes.Gray}></span>
@@ -223,37 +216,29 @@ const CSChinh: React.FC =() => {
                                             Đã sử dụng
                                         </label>
                                     </div>
-                                    
+                                   
                                 </td>
                                 <td className={classes.link}>
+                                    
                                     <p className={classes.Text3}>
                                         Kiosk
                                     </p>
-                                </td>
-
-                                <td className={classes.Update}>
-                                <Link to="/capsochitiet">Chi tiết</Link>
                                 </td>
                             </tr>
                             <tr style={{ background: 'white' }} >
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010003</td>
 
-                                <td>Lê Ái Vân</td>
+                              
 
                                 <td>Khám răng hàm mặt</td>
 
                                 <td className={classes.conditionA}>
+                                   
                                     <p className={classes.BoxRight}>
                                         14:35 - 07/11/2021
                                     </p>
                                 </td>
-                                <td>
-                                <div className={classes.conditionB}>
-                                        <label style={{ marginLeft: '2%' }}   className={classes.BoxRight}>
-                                            14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                               
                                 <td>
                                     <div className={classes.Connect}>
                                             <span className={classes.Green}></span>
@@ -264,35 +249,28 @@ const CSChinh: React.FC =() => {
                                     
                                 </td>
                                 <td className={classes.link}>
+                                    {/* <Link  to="/ChiTietTB">Chi tiết</Link> */}
                                     <p  style={{ width: '70px', marginLeft: '-25px' }}  className={classes.Text3}>
                                         Hệ Thống
                                     </p>
                                 </td>
 
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                               
                             </tr>
                             <tr>
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010004</td>
 
-                                <td>Nguyễn Ái Vân</td>
+                             
 
                                 <td>Khám tai mũi họng</td>
                                 <td className={classes.conditionA}>
-                                    
+                                   
 
                                     <label className={classes.BoxFail}>
                                         14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                          
                                 <td>
                                     <div className={classes.Connect}>
                                         <span className={classes.Green}></span>
@@ -308,14 +286,11 @@ const CSChinh: React.FC =() => {
                                     </p>
                                 </td>
 
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                               
                             </tr>
                             <tr style={{ background: 'white' }} >
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010005</td>
 
-                                <td>Trần Thị Ái Vân</td>
 
                                 <td>Khám hô hấp</td>
 
@@ -325,14 +300,7 @@ const CSChinh: React.FC =() => {
                                         14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                              
                                 <td>
                                     <div className={classes.Connect}>
                                         <span className={classes.Green}></span>
@@ -343,35 +311,28 @@ const CSChinh: React.FC =() => {
                                     
                                 </td>
                                 <td className={classes.link}>
+                                    
                                     <p className={classes.Text3}>
                                         Kiosk
                                     </p>
                                 </td>
 
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                               
                             </tr>
                             <tr>
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010006</td>
 
-                                <td>Lê Huỳnh Nghĩa</td>
+                               
 
                                 <td>Khám tổng quát</td>
                                 <td className={classes.conditionA}>
+                                    
 
                                     <label className={classes.BoxFail}>
                                         14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                               
                                 <td>
                                 <div className={classes.Connect}>
                                         <span className={classes.Gray}></span>
@@ -382,35 +343,27 @@ const CSChinh: React.FC =() => {
                                    
                                 </td>
                                 <td className={classes.link}>
+                                    
                                     <p style={{ width: '70px', marginLeft: '-25px' }}  className={classes.Text3}>
                                         Hệ Thống
                                     </p>
                                 </td>
 
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                                
                             </tr>
                             <tr style={{ background: 'white' }} >
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010007</td>
 
-                                <td>Lê Huỳnh Đức</td>
+                                
 
                                 <td>Khám tai mũi họng</td>
 
                                 <td className={classes.conditionA}>
-                                  
                                     <label className={classes.BoxFail}>
                                         14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                            
                                 <td>
                                 <div className={classes.Connect}>
                                         <span className={classes.Gray}></span>
@@ -426,31 +379,22 @@ const CSChinh: React.FC =() => {
                                         Kiosk
                                     </p>
                                 </td>
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                                
                             </tr>
                             <tr>
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010008</td>
 
-                                <td>Phạm Văn Mạnh</td>
+                                {/* <td>Phạm Văn Mạnh</td> */}
 
                                 <td>Khám tổng quát</td>
 
                                 <td className={classes.conditionA}>
-                                  
+                                    {/* <span className={classes.ConnectFail}></span> */}
                                     <label className={classes.BoxFail}>
                                     14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                               
                                 <td>
                                 <div className={classes.Connect}>
                                         <span className={classes.red}></span>
@@ -461,35 +405,26 @@ const CSChinh: React.FC =() => {
                                    
                                 </td>
                                 <td className={classes.link}>
+                                   
                                     <p style={{ width: '70px', marginLeft: '-25px' }}  className={classes.Text3}>
                                         Hệ Thống
                                     </p>
                                 </td>
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                               
                             </tr>
                             <tr style={{ background: 'white' }} >
                                 <td style={{ textAlign:'center', width: '8%' }}  >2010009</td>
 
-                                <td>Lê Thị Cẩm Tiên</td>
+                              
 
                                 <td>Khám tai mũi họng</td>
 
                                 <td className={classes.conditionA}>
-                                    {/* <span className={classes.ConnectFail}></span> */}
                                     <label className={classes.BoxFail}>
                                     14:35 - 07/11/2021
                                     </label>
                                 </td>
-                                <td>
-                                    <div className={classes.conditionB}>
-                                        {/* <span className={classes.ConnectFalse}></span> */}
-                                        <label className={classes.BoxFalse}>
-                                        14:35 - 12/11/2021
-                                        </label>
-                                    </div>
-                                </td>
+                               
                                 <td>
                                 <div className={classes.Connect}>
                                         <span className={classes.Gray}></span>
@@ -505,16 +440,14 @@ const CSChinh: React.FC =() => {
                                         Hệ thống
                                     </p>
                                 </td>
-                                <td className={classes.Update}>
-                                <Link to="/CapSoChiTiet">Chi tiết</Link>
-                                </td>
+                               
                             </tr>
                         </tbody>
                     </table>
                 </div>
                         <div className={classes.ThemTB}>
-                            <Link to='/capsomoi'><img src={Add} />
-                                Cấp số mới
+                            <Link to='/CapSoMoi'><img src={Add} />
+                                Tải về
                             </Link>
                         </div>
                         <div className={classes.PhantrangThietBi}>
@@ -524,4 +457,4 @@ const CSChinh: React.FC =() => {
         </div>
     );
 };
-export default CSChinh;
+export default BaoCao;

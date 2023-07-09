@@ -17,12 +17,18 @@ import CSChinh from './components/CapSo/CSChinh/CSChinh';
 import CSDangCho from './components/CapSo/CSChinh/CSDangCho/CSDangCho';
 import CSDaSD from './components/CapSo/CSChinh/CSDaSD/CSDaSD';
 import CSChiTiet from './components/CapSo/CSChiTiet/CSChiTiet';
-
-
-
+import CSMoi from './components/CapSo/CSMoi/CSMoi';
+import InSo from './components/CapSo/CSMoi/InSo/InSo';
+import BaoCao from './components/BaoCao/BaoCao';
 import ND from './components/CDTB/ND/ND';
 import VT from './components/CDTB/VT/VT';
+import VTCapNhat from './components/CDTB/VT/VTCapNhat/VTCapNhat';
 import TK from './components/CDTB/TK/TK';
+import TKCapNhat from './components/CDTB/TK/TKCapNhat/TKCapNhat';
+import TKThem from './components/CDTB/TK/TKThem/TKThem';
+import DashBoard from './components/Dashboard/DB';
+import DBNgay from './components/Dashboard/DBNgay/DBNgay';
+import DBThang from './components/Dashboard/DBThang/DBThang';
 
 function App() {
  
@@ -47,12 +53,18 @@ function App() {
       <Route path='/capsodangcho' element={<CSDangCho/>} />
       <Route path='/capsodasudung' element={<CSDaSD/>} />
       <Route path='/capsochitiet' element={<CSChiTiet/>} />
-
-
-
+      <Route path='/capsomoi' element={<CSMoi/>} />
+      <Route path='/inso' element={<InSo/>} />
+      <Route path='/baocao' element={<BaoCao/>} />
       <Route path='/ND' element={<ND/>} />
       <Route path='/VT' element={<VT/>} />
+      <Route path='/vaitrocapnhat' element={<VTCapNhat/>} />
       <Route path='/TK' element={<TK/>} />
+      <Route path='/taikhoancapnhat' element={<TKCapNhat/>} />
+      <Route path='/taikhoanthem' element={<TKThem/>} />
+      <Route path='/dashboard' element={<DashBoard/>} />
+      <Route path='/dbngay' element={<DBNgay/>} />
+      <Route path='/dbthang' element={<DBThang/>} />
 
       </Routes>
     </BrowserRouter>

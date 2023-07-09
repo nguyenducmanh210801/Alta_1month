@@ -140,26 +140,56 @@
         border-radius: 8px;
         border: 1.5px solid #FFAC6A;
     }
-    /* search */
-    .MenuSearch {
+    .Combobox4 label {
+        position: absolute;
+        width: 126px;
+        height: 24px;
+        left: 805px;
+        top: 156px;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #282739;
+    }
+    .Combobox4 select {
+        position: absolute;
+        width: 177px;
+        height: 44px;
+        left: 805px;
+        top: 184px;
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 16px 10px 12px;
-        gap: 10px;
-        position: absolute;
-        left: 1250px;
-        top: 184px;
-        width: 326px;
-        height: 44px;
+        padding: 10px 12px;
+        size: 30px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 1.5px solid #FFAC6A;
+    }
+    /* search */
+    .MenuSearch {
+        box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 12px;
+    gap: 10px;
+    position: absolute;
+    left: 1352px;
+    top: 184px;
+    width: 238px;
+    height: 44px;
     }
     .MenuSearch label{
         position: absolute;
         width: 62px;
         height: 23.96px;
-        right: 249px;
+        right: 158px;
         top: -21px;
         font-family: 'Nunito';
         font-style: normal;
@@ -330,10 +360,8 @@
 {
     font-family: 'Nunito';
     font-style: normal;
-
     width: 46px;
     height: 38px;
-    
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
@@ -350,18 +378,14 @@
     width: 288px;
     height: 32px;
     left: 1287px;
-    top: 55rem;
-    /* color: #FF7506;
-    border-color: orange; */
-    /* background-color: rgb(203, 199, 194); */
+    top: 56rem;
     border-radius: 5px;
-    /* background: #FF7506; */
 }
+
 td>a {
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
-    /* line-height: 21px; */
     border-bottom: 1px solid blue;
     color: #4277FF;
 }
@@ -405,9 +429,9 @@ td{
     position: absolute;   
     font-family: 'Nunito';
     font-style: normal;
-    width: 106px;
+    width: 954px;
     height: 24px;
-    left: 803px;
+    left: 14%;
     top: 143px;
     font-weight: 600;
     font-size: 16px;
@@ -416,6 +440,102 @@ td{
 }
 .Arrow{
     position: absolute;
-    left: 60%;
-    top: 23%
+    left: 24%;
+    top: 23%;
+}
+.DetailEqui {
+    position: absolute;
+    width: 201px;
+    height: 199px;
+    left: 2px;
+    top: 51px;
+    background: white;
+    /* box-shadow: 2px 2px 8px rgba(248, 248, 248, 0.8); */
+    border-radius: 16px;
+    opacity: 0;
+}
+.DetailEqui:hover{
+    opacity: 1.0;
+}
+
+.DetailEqui2 {
+    position: absolute;
+    width: 336px;
+    height: 199px;
+    left: 477px;
+    top: 51px;
+    background: white;
+    /* box-shadow: 2px 2px 8px rgba(248, 248, 248, 0.8); */
+    border-radius: 16px;
+    opacity: 0;
+}
+.DetailEqui2:hover{
+    opacity: 1.0;
+}
+.DetailEqui3 {
+    position: absolute;
+    width: 271px;
+    height: 169px;
+    left: 813px;
+    top: 51px;
+    background: white;
+    /* box-shadow: 2px 2px 8px rgba(248, 248, 248, 0.8); */
+    border-radius: 16px;
+    opacity: 0;
+}
+.DetailEqui3:hover{
+    opacity: 1.0;
+}
+.DetailEqui4 {
+    position: absolute;
+    width: 271px;
+    height: 169px;
+    left: 1086px;
+    top: 51px;
+    background: white;
+    /* box-shadow: 2px 2px 8px rgba(248, 248, 248, 0.8); */
+    border-radius: 16px;
+    opacity: 0;
+}
+.DetailEqui4:hover{
+    opacity: 1.0;
+}
+.DetailEqui5 {
+    position: absolute;
+    width: 271px;
+    height: 169px;
+    left: 204px;
+    top: 51px;
+    background: white;
+    /* box-shadow: 2px 2px 8px rgba(248, 248, 248, 0.8); */
+    border-radius: 16px;
+    opacity: 0;
+}
+.DetailEqui5:hover{
+    opacity: 1.0;
+}
+.sott{
+    margin-left: 18px;
+}
+.sott p:hover{
+    background-color: #FF9138;
+}
+.thanh img {
+    margin-left: 198px;
+}
+.KhamTQ{
+    margin-left: -241px;
+    margin-right: -483px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+.KhamTQ2{
+    margin-left: -241px;
+    margin-right: -483px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
 }

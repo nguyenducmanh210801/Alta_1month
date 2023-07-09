@@ -140,7 +140,7 @@ const VT:React.FC =() => {
                 </table>
             </div>
             <div className={classes.ThemDichVu}>
-                <Link to='/VaiTroThem'>
+                <Link to='/vaitrocapnhat'>
                 <img src={Vector}></img>Thêm vai trò</Link>
             </div>
             <div className={classes.PhanTrang}>
